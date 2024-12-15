@@ -1,0 +1,254 @@
+:root {
+    /* Light Mode Variables */
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --card-background: #ffffff;
+    --border-color: #e9ecef;
+    --navbar-bg: #ffffff;
+    --navbar-text: #343a40;
+    --link-color: #0d6efd;
+    --alert-bg: #ffffff;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+}
+
+body.dark-mode {
+    /* Dark Mode Variables (VS Code inspired) */
+    --background-color: #1E1E1E;
+    --text-color: #D4D4D4;
+    --card-background: #252526;
+    --border-color: #3C3C3C;
+    --navbar-bg: #252526;
+    --navbar-text: #D4D4D4;
+    --link-color: #4FC1FF;
+    --alert-bg: #2A2A2A;
+    --input-bg: #3C3C3C;
+    --input-border: #555555;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar, .footer, .card-header, .accordion-button {
+    background-color: var(--navbar-bg) !important;
+    color: var(--navbar-text) !important;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.list-group-item {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.table {
+    color: var(--text-color);
+}
+
+.table thead th {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.table tbody tr:hover {
+    background-color: #2A2A2A;
+}
+
+.btn {
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Buttons on dark are still visible. They rely on Bootstrap defaults.
+   To make them stand out, ensure contrast is good enough. */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0a58ca;
+    border-color: #0a58ca;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #146c43;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+
+/* Alerts */
+.alert {
+    background-color: var(--alert-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+a, .nav-link {
+    color: var(--link-color);
+}
+
+a:hover, .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+    border-color: var(--link-color);
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-link {
+    border: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom: 3px solid var(--link-color);
+    color: var(--link-color);
+}
+
+.btn-close {
+    font-size: 1.1em;
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+.btn-close:hover {
+    opacity: 0.75;
+}
+
+/* Accordion */
+.accordion-button {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--link-color);
+    background-color: #2A2A2A;
+}
+
+/* Dark mode hover adjustments */
+body.dark-mode .list-group-item {
+    border-color: #444;
+}
+
+body.dark-mode .table tbody tr:hover {
+    background-color: #2A2A2A;
+}
+
+.table {
+    width: 100%;
+    color: var(--text-color);
+    border-collapse: separate; /* or collapse if you prefer */
+    border-spacing: 0;
+}
+
+.table thead th {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.table tbody tr {
+    background-color: var(--card-background);
+}
+
+.table tbody tr:hover {
+    background-color: #2A2A2A; /* Slightly lighter than card background for hover */
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Ensure td text color is always visible in dark mode */
+.table td {
+    color: var(--text-color);
+    background-color: var(--card-background);
+}
+
+.table th {
+    color: var(--text-color);
+    background-color: var(--border-color);
+}
+
+/* If you want zebra striping, you could do:
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #2E2E2E; 
+}
+(Adjust as desired)
+*/
+.accordion-button {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--link-color);
+    background-color: #2A2A2A; /* Slightly lighter than card-bg for expanded state */
+}
+
+.accordion-body {
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+    /* Add padding if needed, often Bootstrap defaults are fine:
+       padding: 1rem;
+    */
+}
+
+/* If you want to adjust the accordion item borders for dark mode: */
+.accordion-item {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}

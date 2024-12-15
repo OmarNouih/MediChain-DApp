@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome, {{ name }}!</h2>
+<h5>Role: {{ role.capitalize() }}</h5>
+<hr>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <h4>Your Information</h4>
+        <ul class="list-group">
+            {% for key, value in user_info.items() %}
+                <li class="list-group-item"><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <!-- Future: Display policies, claims, etc. -->
+        <h4>Policies & Claims (Coming Soon)</h4>
+        <p>Here you can display insurer-specific data like managed policies, claims awaiting approval, etc.</p>
+    </div>
+</div>
+{% endblock %}

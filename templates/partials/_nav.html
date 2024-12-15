@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MediChain</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mediNav" aria-controls="mediNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mediNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if session.get('role') == 'patient' %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('dashboard') }}">My Dashboard</a>
+          </li>
+        {% elif session.get('role') == 'doctor' %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('dashboard') }}">My Patients</a>
+          </li>
+        {% elif session.get('role') == 'insurer' %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+          </li>
+        {% endif %}
+      </ul>
+      <form class="d-flex">
+        {% if session.get('address') %}
+          <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">Logout</a>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</nav>
