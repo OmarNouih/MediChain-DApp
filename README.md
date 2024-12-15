@@ -21,7 +21,7 @@ MediChain-DApp is a decentralized desktop application designed to manage and sec
 
 Watch the demonstration video of **MediChain-DApp** below (it will play automatically):
 
-[Watch the video](https://omarNouih.github.io/MediChain-DApp)
+[Link to Video Demonstration](https://github.com/OmarNouih/MediChain-DApp/DEMENSTRATTION_VIDEO)
 
 ## Getting Started
 
