@@ -1,0 +1,7 @@
+Flask==2.0.3
+Flask-Session==0.4.0
+FlaskWebGUI==0.2.3
+web3==5.31.3
+solcx==0.6.1
+python-dotenv==0.21.0
+requests==2.27.1
