@@ -18,9 +18,10 @@ MediChain-DApp is a decentralized desktop application designed to manage and sec
 - **Blockchain Interaction:** Web3.py for communicating with the Ethereum network
 
 ## Demonstration Video
-Watch the demonstration video of **MediChain-DApp** below:
 
-[![Watch the demonstration video](http://img.youtube.com/vi/your-video-id/0.jpg)](https://www.youtube.com/watch?v=your-video-id)
+Watch the demonstration video of **MediChain-DApp** below (it will play automatically):
+
+[Watch the video](https://omarNouih.github.io/MediChain-DApp)
 
 ## Getting Started
 
